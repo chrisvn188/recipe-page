@@ -1,0 +1,237 @@
+@font-face {
+  font-family: Outfit;
+  src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf')
+    format('truetype');
+}
+
+@font-face {
+  font-family: YoungSerif;
+  src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf')
+    format('truetype');
+}
+
+:root {
+  --primary-nutmeg: hsl(14, 45%, 36%);
+  --primary-raspberry: hsl(332, 51%, 32%);
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-rose-white: hsl(330, 100%, 98%);
+  --neutral-eggshell: hsl(30, 54%, 90%);
+  --neutral-light-grey: hsl(30, 18%, 87%);
+  --neutral-wenge-brown: hsl(30, 10%, 34%);
+  --neutral-dark-charcoal: hsl(16, 22%, 20%);
+
+  --space-xs: 1rem;
+  --space-sm: 1.5rem;
+  --space-md: 2rem;
+  --space-lg: 2.5rem;
+  --space-xxl: 6rem;
+
+  --round-lg: 1.5rem;
+  --round-md: 1rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100dvh;
+  line-height: 1.5;
+  font-family: Outfit, sans-serif;
+  background-color: var(--neutral-eggshell);
+  @media (min-width: 40rem) {
+    padding-block: var(--space-xxl);
+    padding-inline: var(--space-lg);
+  }
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+h1,
+h2 {
+  font-family: YoungSerif, serif;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for buttons */
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* utility classes */
+.page-width {
+  max-width: 42rem;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.padding-sm {
+  padding: var(--space-sm);
+}
+
+.padding-md {
+  padding: var(--space-md);
+  @media (min-width: 40rem) {
+    padding: var(--space-lg);
+  }
+}
+
+.padding-l-small {
+  padding-left: var(--space-xs);
+}
+
+.padding-l-regular {
+  padding-left: var(--space-sm);
+}
+
+.fs-regular {
+  font-size: 1rem;
+}
+
+.fs-medium {
+  font-size: 2.25rem;
+  @media (min-width: 40rem) {
+    font-size: 2.5rem;
+  }
+}
+
+.fw-regular {
+  font-weight: 400;
+}
+
+.fw-semibold {
+  font-weight: 600;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+.text-nutmeg {
+  color: var(--primary-nutmeg);
+}
+
+.text-purple {
+  color: var(--primary-raspberry);
+}
+
+.text-brown {
+  color: var(--neutral-wenge-brown);
+}
+
+.text-dark {
+  color: var(--neutral-dark-charcoal);
+}
+
+.text-semidark {
+  color: var(--neutral-wenge-brown);
+}
+
+.lightpink-bg {
+  background-color: var(--neutral-rose-white);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.gap-xs {
+  gap: var(--space-xs);
+}
+
+.round-md {
+  border-radius: var(--round-md);
+}
+
+/* compositions */
+.page-flow > * + * {
+  margin-top: var(--space-lg);
+}
+
+.component-flow > * + * {
+  margin-top: var(--space-md);
+}
+
+.inside-component-flow > * + * {
+  margin-top: var(--space-sm);
+}
+
+/* blocks */
+.recipe {
+  background-color: var(--neutral-white);
+  @media (min-width: 40rem) {
+    border-radius: var(--round-lg);
+  }
+}
+
+.recipe__image {
+  margin-left: calc(-1 * var(--space-md));
+  margin-right: calc(-1 * var(--space-md));
+  margin-top: calc(-1 * var(--space-md));
+  @media (min-width: 40rem) {
+    margin: 0;
+  }
+}
+
+.recipe__preparation-time > h2 {
+  font-family: Outfit, sans-serif;
+  font-weight: 600;
+}
+
+.recipe__preparation-time li::marker {
+  color: var(--primary-raspberry);
+  font-size: 0.8rem;
+}
+
+.recipe__ingredients li::marker {
+  color: var(--primary-nutmeg);
+  font-size: 0.8rem;
+}
+
+.recipe__instructions li::marker {
+  color: var(--primary-nutmeg);
+  font-weight: 700;
+}
