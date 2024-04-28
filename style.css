@@ -84,8 +84,12 @@ h2 {
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   letter-spacing: 1px;
+
+  @media (min-width: 40rem) {
+    font-size: 1.8rem;
+  }
 }
 
 /* Make images easier to work with */
