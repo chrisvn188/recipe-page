@@ -52,6 +52,7 @@ body {
   line-height: 1.5;
   font-family: Outfit, sans-serif;
   background-color: var(--neutral-eggshell);
+
   @media (min-width: 40rem) {
     padding-block: var(--space-xxl);
     padding-inline: var(--space-lg);
@@ -140,6 +141,7 @@ table td {
 
 .padding-md {
   padding: var(--space-md);
+
   @media (min-width: 40rem) {
     padding: var(--space-lg);
   }
@@ -159,6 +161,7 @@ table td {
 
 .fs-medium {
   font-size: 2.25rem;
+
   @media (min-width: 40rem) {
     font-size: 2.5rem;
   }
@@ -232,12 +235,14 @@ table td {
 /* blocks */
 .recipe {
   background-color: var(--neutral-white);
+
   @media (min-width: 40rem) {
     border-radius: var(--round-lg);
   }
 }
 
 .recipe__image {
+  /* a trick to make full width image */
   margin-left: calc(-1 * var(--space-md));
   margin-right: calc(-1 * var(--space-md));
   margin-top: calc(-1 * var(--space-md));
