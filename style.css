@@ -220,6 +220,17 @@ table td {
   border-radius: var(--round-md);
 }
 
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* compositions */
 .page-flow > * + * {
   margin-top: var(--space-lg);
@@ -236,6 +247,7 @@ table td {
 /* blocks */
 .recipe {
   background-color: var(--neutral-white);
+  animation: appear 0.5s ease;
 
   @media (min-width: 40rem) {
     border-radius: var(--round-lg);
