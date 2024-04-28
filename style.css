@@ -97,7 +97,8 @@ button {
 }
 
 hr {
-  border: 1px solid var(--neutral-rose-white);
+  border: none;
+  border-bottom: 1px solid var(--neutral-light-grey);
 }
 
 table {
