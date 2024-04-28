@@ -95,6 +95,36 @@ button {
   font-size: inherit;
 }
 
+hr {
+  border: 1px solid var(--neutral-light-grey);
+}
+
+table {
+  width: 100%;
+}
+
+table tr {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: left;
+  padding: 1rem;
+}
+
+table th {
+  padding-left: 0.5rem;
+  font-weight: 400;
+  color: var(--neutral-wenge-brown);
+}
+
+table tr:not(:last-child) {
+  border-bottom: 1px solid var(--neutral-light-grey);
+}
+
+table td {
+  color: var(--primary-nutmeg);
+  font-weight: 600;
+}
+
 /* utility classes */
 .page-width {
   max-width: 42rem;
